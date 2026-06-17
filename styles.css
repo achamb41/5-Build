@@ -1,8 +1,8 @@
-/* CSS by Christina Carrasquilla, iteration by */
+/* CSS by Christina Carrasquilla, iteration by Adrianna Chamberlain */
 
 /* ===== Color Palette ===== 
 
-    backgound: #0f172a;
+    background: #0f172a;
     nav-footer: #020617;
     card: #1e293b;
     text-main: #e2e8f0;
@@ -64,6 +64,21 @@ main {
     padding: 1rem;
 }
 
+main ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+main a {
+    color: #e2e8f0;
+    text-decoration: none;
+    padding: 0.5rem;
+    display: block;
+    border-left: 4px solid #38bdf8;
+    margin: .25rem;
+}
+
 img {
     width:100%;
 }
@@ -104,8 +119,30 @@ footer {
 
 /* ===== Media Query (Medium) ===== */
 /* write a media query for a screen with at least 800px */
+@media screen and (min-width: 800px) {
 /* change the body's grid template to 1fr 300px */
+    body {
+        grid-template-columns: 1fr 300px;
+    }
 /* target the header, nav, and footer and style their grid-column to 1/-1 */
-/* target the nav and display it flex, spaceed around */
+    header, nav, footer {
+        grid-column: 1/-1;
+    }
+/* target the nav and display it flex, spaced around */
+    nav {
+        display: flex;
+        justify-content: space-around;
+    }
+    nav ul {
+        display: flex;
+        flex-direction: row;
+    }
 /* target the .card-row to display flex */
-/* target the sections in .card-row witha width for 30% */
+    .card-row {
+        display: flex;
+    }
+/* target the sections in .card-row with a width for 30% */
+    .card-row section {
+        width: 30%;
+    }
+}
